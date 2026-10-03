@@ -11,6 +11,7 @@
     <meta name="robots" content="index, follow">
 
     <style>
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -36,7 +37,10 @@
             padding: 0 20px;
         }
 
-        /* Main Navigation */
+
+        /* =========================
+           MAIN NAVIGATION
+        ========================= */
 
         .main-nav {
             margin-top: 20px;
@@ -64,7 +68,10 @@
             border-radius: 5px;
         }
 
-        /* Resources Dropdown */
+
+        /* =========================
+           RESOURCES DROPDOWN
+        ========================= */
 
         .dropdown {
             position: relative;
@@ -115,7 +122,10 @@
             display: block;
         }
 
-        /* Hero Section */
+
+        /* =========================
+           HERO SECTION
+        ========================= */
 
         .hero {
             background: white;
@@ -133,7 +143,10 @@
             max-width: 800px;
         }
 
-        /* General Sections */
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
 
         .section {
             padding: 45px 20px;
@@ -183,7 +196,10 @@
             border-radius: 5px;
         }
 
-        /* Google Maps Section */
+
+        /* =========================
+           GOOGLE MAPS SECTION
+        ========================= */
 
         .map-section {
             background: white;
@@ -216,21 +232,182 @@
             border: 0;
         }
 
-        /* Footer */
 
-        footer {
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .site-footer {
             margin-top: 20px;
-            background: #1f3d4d;
+            background: #344f59;
             color: white;
-            padding: 30px 20px;
+            padding: 50px 20px 0;
+        }
+
+        .footer-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 20px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: start;
+        }
+
+
+        /* Footer Brand */
+
+        .footer-brand {
+            text-align: left;
+        }
+
+        .footer-brand-name {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .footer-tagline {
+            color: white;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+
+        /* Social Media */
+
+        .social-links {
+            display: flex;
+            gap: 14px;
+            margin-top: 22px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            width: 34px;
+            height: 34px;
+
+            background: white;
+            color: #344f59;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-decoration: none;
+
+            font-weight: bold;
+            font-size: 15px;
+
+            transition: 0.2s ease;
+        }
+
+        .social-links a:hover {
+            background: #f1f1f1;
+            color: #1f3d4d;
+        }
+
+
+        /* Contact Heading */
+
+        .footer-contact h3 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 28px;
+            font-weight: normal;
+            letter-spacing: 0.5px;
+
+            margin-bottom: 10px;
+        }
+
+        .footer-contact h3::after {
+            content: "";
+
+            display: block;
+
+            width: 60px;
+            height: 3px;
+
+            background: white;
+
+            margin-top: 8px;
+        }
+
+
+        /* Contact Rows */
+
+        .contact-line {
+            display: flex;
+            align-items: flex-start;
+
+            gap: 14px;
+
+            margin-top: 20px;
+        }
+
+        .contact-icon {
+            width: 22px;
+            min-width: 22px;
+
+            font-size: 20px;
+            line-height: 1.5;
+        }
+
+        .contact-line p {
+            margin: 0;
+
+            font-size: 15px;
+            line-height: 1.7;
+
+            color: white;
+        }
+
+        .contact-line strong {
+            color: white;
+        }
+
+        .contact-line a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-line a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* Footer Bottom */
+
+        .footer-bottom {
+            max-width: 1100px;
+
+            margin: 45px auto 0;
+
+            padding: 20px;
+
+            border-top: 1px solid rgba(255,255,255,0.25);
+
             text-align: center;
         }
 
-        footer a {
-            color: white;
+        .footer-bottom p {
+            margin: 5px 0;
+            font-size: 14px;
         }
 
-        /* Mobile Navigation */
+        .footer-bottom a {
+            color: white;
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 700px) {
 
@@ -258,130 +435,212 @@
                 height: 350px;
             }
 
+
+            /* Footer Mobile */
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .footer-brand {
+                text-align: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            .footer-contact {
+                text-align: left;
+            }
+
+            .footer-contact h3 {
+                font-size: 26px;
+            }
+
         }
+
     </style>
 </head>
 
+
 <body>
 
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
+
     <div class="container">
 
         <h2>New Age Home</h2>
 
-        <p>Home Improvement & Interior Solutions</p>
+        <p>
+            Home Improvement & Interior Solutions
+        </p>
+
 
         <nav class="main-nav">
 
-            <!-- Home -->
-            <a href="index.html">Home</a>
 
-            <!-- Resources Dropdown -->
+            <!-- HOME -->
+
+            <a href="index.html">
+                Home
+            </a>
+
+
+            <!-- RESOURCES DROPDOWN -->
+
             <div class="dropdown">
 
                 <button class="dropbtn">
+
                     Resources
-                    <span class="arrow">▼</span>
+
+                    <span class="arrow">
+                        ▼
+                    </span>
+
                 </button>
 
+
                 <div class="dropdown-content">
+
 
                     <a href="resources.html#review-platforms">
                         Review Platforms
                     </a>
 
+
                     <a href="resources.html#business-directories">
                         Business Directories
                     </a>
+
 
                     <a href="resources.html#marketplace-profiles">
                         Marketplace Profiles
                     </a>
 
+
                     <a href="resources.html#profile-platforms">
                         Profile Platforms
                     </a>
+
 
                     <a href="resources.html#social-media">
                         Social Media
                     </a>
 
+
                     <a href="resources.html#article-platforms">
                         Article Platforms
                     </a>
+
 
                     <a href="resources.html#website-builder-profiles">
                         Website Builder Profiles
                     </a>
 
+
                     <a href="resources.html#coding-platforms">
                         Coding Platforms
                     </a>
+
 
                     <a href="resources.html#creative-design-photography">
                         Creative, Design, Photography & Visual Platforms
                     </a>
 
+
                     <a href="resources.html#entertainment-community">
                         Entertainment, Community & Interest Profiles
                     </a>
+
 
                     <a href="resources.html#community-membership">
                         Community / Membership / Network Profiles
                     </a>
 
+
                     <a href="resources.html#bookmarking-platforms">
                         Bookmarking Platforms
                     </a>
+
 
                     <a href="resources.html#classified-ads">
                         Classified Ads
                     </a>
 
+
                     <a href="resources.html#map-location">
                         Map, Location & Geographic Platforms
                     </a>
+
 
                     <a href="resources.html#other">
                         Other
                     </a>
 
+
                 </div>
+
             </div>
 
-            <!-- Contact -->
+
+            <!-- CONTACT -->
+
             <a href="https://www.newagehome.store/contact-us/">
                 Contact Us
             </a>
 
-            <!-- About -->
+
+            <!-- ABOUT -->
+
             <a href="https://www.newagehome.store/about-us/">
                 About Us
             </a>
 
+
         </nav>
 
     </div>
+
 </header>
 
 
-<!-- HERO -->
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
     <div class="container">
 
-        <h1>New Age Home - One Stop Interior Solution</h1>
+        <h1>
+            New Age Home - One Stop Interior Solution
+        </h1>
+
 
         <p>
-            New Age Home is a home improvement and interior solutions brand
-            offering PVC wall panels, ceiling panels, PVC boards, doors,
-            door frames, laminates and flooring solutions for residential
-            and commercial interiors.
+
+            New Age Home is a home improvement and interior solutions
+            brand offering PVC wall panels, ceiling panels, PVC boards,
+            doors, door frames, laminates and flooring solutions for
+            residential and commercial interiors.
+
         </p>
 
-        <a class="button" href="https://www.newagehome.store/">
+
+        <a class="button"
+           href="https://www.newagehome.store/">
+
             Visit New Age Home
+
         </a>
 
     </div>
@@ -389,110 +648,184 @@
 </section>
 
 
-<!-- PRODUCT CATEGORIES -->
+
+<!-- =========================
+     PRODUCT CATEGORIES
+========================= -->
 
 <section class="section">
 
     <div class="container">
 
-        <h2>Our Product Categories</h2>
+
+        <h2>
+            Our Product Categories
+        </h2>
+
 
         <div class="grid">
 
+
+            <!-- VENYA LOUVERS -->
+
             <div class="card">
 
-                <h3>Venya Louvers (Ceiling & Wall Panels)</h3>
+                <h3>
+                    Venya Louvers (Ceiling & Wall Panels)
+                </h3>
+
 
                 <p>
+
                     Decorative PVC wall panel solutions for residential,
                     office and commercial interiors.
+
                 </p>
+
 
                 <a href="https://www.newagehome.store/venya-louvers-ceiling-wall-panels/">
+
                     View product resources
+
                 </a>
 
             </div>
 
 
+
+            <!-- VENYA ARTIST WALLS -->
+
             <div class="card">
 
-                <h3>Venya Artist Walls (Wall Panels)</h3>
+                <h3>
+                    Venya Artist Walls (Wall Panels)
+                </h3>
+
 
                 <p>
+
                     Decorative wall panel solutions for different
                     interior applications.
+
                 </p>
+
 
                 <a href="https://www.newagehome.store/venya-artist-walls-wall-panels/">
+
                     View product resources
+
                 </a>
 
             </div>
 
 
+
+            <!-- CABINETRY -->
+
             <div class="card">
 
-                <h3>Cabinetry & Furnitures</h3>
+                <h3>
+                    Cabinetry & Furnitures
+                </h3>
+
 
                 <p>
-                    PVC blend-based boards for cabinetry, furniture and
-                    interior applications.
+
+                    PVC blend-based boards for cabinetry, furniture
+                    and interior applications.
+
                 </p>
+
 
                 <a href="https://www.newagehome.store/canvas-prelaminate-18mm/">
+
                     View product resources
+
                 </a>
 
             </div>
 
 
+
+            <!-- MASTER BOARDS -->
+
             <div class="card">
 
-                <h3>Master Boards</h3>
+                <h3>
+                    Master Boards
+                </h3>
+
 
                 <p>
+
                     PVC blend-based engineered board solutions for
                     interior and furniture applications.
+
                 </p>
+
 
                 <a href="https://www.newagehome.store/master-board/">
+
                     View product resources
+
                 </a>
 
             </div>
 
 
+
+            <!-- DOORS -->
+
             <div class="card">
 
-                <h3>Doors and Frames</h3>
+                <h3>
+                    Doors and Frames
+                </h3>
+
 
                 <p>
+
                     SafeStrong doors and door frame solutions for
                     residential and commercial projects.
+
                 </p>
 
+
                 <a href="https://www.newagehome.store/doors-and-frames/">
+
                     View product resources
+
                 </a>
 
             </div>
 
+
+
+            <!-- FLOORING -->
 
             <div class="card">
 
-                <h3>Parsh (Floorings)</h3>
+                <h3>
+                    Parsh (Floorings)
+                </h3>
+
 
                 <p>
+
                     Flooring solutions for residential and commercial
                     interior projects.
+
                 </p>
 
+
                 <a href="https://www.newagehome.store/floorings/">
+
                     View product resources
+
                 </a>
 
             </div>
+
 
         </div>
 
@@ -501,22 +834,35 @@
 </section>
 
 
-<!-- INTERIOR RESOURCES -->
+
+<!-- =========================
+     INTERIOR RESOURCES
+========================= -->
 
 <section class="section">
 
     <div class="container">
 
-        <h2>Interior & Home Improvement Resources</h2>
+
+        <h2>
+            Interior & Home Improvement Resources
+        </h2>
+
 
         <p>
+
             Find useful information about PVC wall panels, ceiling panels,
             PVC boards, doors, door frames, laminates, flooring and other
             interior material applications.
+
         </p>
 
-        <a class="button" href="https://www.newagehome.store/home-improvement-store-in-udaipur/">
+
+        <a class="button"
+           href="https://www.newagehome.store/home-improvement-store-in-udaipur/">
+
             View Resources
+
         </a>
 
     </div>
@@ -524,15 +870,23 @@
 </section>
 
 
-<!-- BUSINESS PROFILES -->
+
+<!-- =========================
+     BUSINESS PROFILES
+========================= -->
 
 <section class="section">
 
     <div class="container">
 
-        <h2>New Age Home Business Profiles</h2>
+
+        <h2>
+            New Age Home Business Profiles
+        </h2>
+
 
         <p>
+
             New Age Home by ECHON is a one-stop destination for premium
             PVC and WPC building materials, delivering interior solutions
             for architects, interior designers, builders, contractors,
@@ -543,10 +897,15 @@
             panels, SafeStrong doors and frames, PVC flooring and
             cabinetry materials with product guidance and bulk project
             supply from the Udaipur experience centre.
+
         </p>
 
-        <a class="button" href="https://local.google.com/place?id=16887196701907841256&use=srp">
+
+        <a class="button"
+           href="https://local.google.com/place?id=16887196701907841256&use=srp">
+
             View Business Profiles
+
         </a>
 
     </div>
@@ -554,34 +913,53 @@
 </section>
 
 
-<!-- ABOUT -->
+
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section class="section">
 
     <div class="container">
 
-        <h2>About New Age Home</h2>
+
+        <h2>
+            About New Age Home
+        </h2>
+
 
         <p>
+
             New Age Home is the retail initiative of Echon, offering
             interior and home improvement materials for residential,
             commercial and professional projects.
+
         </p>
+
 
         <br>
 
+
         <p>
+
             The product range includes PVC wall and ceiling solutions,
             Venya Louvers, Venya Artist Walls, MasterBoard, cabinetry
             materials, laminates, SafeStrong doors and frames and flooring.
+
         </p>
+
 
         <br>
 
+
         <p>
+
             <a href="https://www.newagehome.store/about-us/">
+
                 Learn more about New Age Home →
+
             </a>
+
         </p>
 
     </div>
@@ -589,20 +967,31 @@
 </section>
 
 
-<!-- GOOGLE MAP -->
+
+<!-- =========================
+     GOOGLE MAP
+========================= -->
 
 <section class="map-section">
 
     <div class="container">
 
-        <h2>Visit New Age Home</h2>
+
+        <h2>
+            Visit New Age Home
+        </h2>
+
 
         <p>
+
             Find the New Age Home experience centre in Udaipur,
             Rajasthan, and view the location on Google Maps.
+
         </p>
 
+
         <div class="map-container">
+
 
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4314.422534574099!2d73.69372431441111!3d24.589802117074566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3967e5df7708accd%3A0xea5b5fed9d5d70e8!2sNew%20Age%20Home!5e0!3m2!1sen!2sin!4v1766644233519!5m2!1sen!2sin"
@@ -614,6 +1003,7 @@
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
 
+
         </div>
 
     </div>
@@ -621,25 +1011,241 @@
 </section>
 
 
-<!-- FOOTER -->
 
-<footer>
+<!-- =========================
+     FOOTER
+========================= -->
 
-    <p>
-        © New Age Home
-    </p>
+<footer class="site-footer">
 
-    <p>
-        Home Improvement & Interior Solutions
-    </p>
 
-    <p style="margin-top:10px;">
+    <div class="footer-container">
 
-        <a href="https://www.newagehome.store/">
-            Official New Age Home Website
-        </a>
 
-    </p>
+        <!-- BRAND AREA -->
+
+        <div class="footer-brand">
+
+
+            <a class="footer-brand-name"
+               href="https://www.newagehome.store/">
+
+                New Age Home
+
+            </a>
+
+
+            <p class="footer-tagline">
+
+                FROM HOUSE OF ECHON
+
+            </p>
+
+
+            <!-- SOCIAL LINKS -->
+
+            <div class="social-links">
+
+
+                <!-- Facebook -->
+
+                <a href="#"
+                   aria-label="Facebook"
+                   target="_blank"
+                   rel="noopener">
+
+                    f
+
+                </a>
+
+
+                <!-- Instagram -->
+
+                <a href="#"
+                   aria-label="Instagram"
+                   target="_blank"
+                   rel="noopener">
+
+                    ◎
+
+                </a>
+
+
+                <!-- Pinterest -->
+
+                <a href="#"
+                   aria-label="Pinterest"
+                   target="_blank"
+                   rel="noopener">
+
+                    p
+
+                </a>
+
+
+                <!-- LinkedIn -->
+
+                <a href="#"
+                   aria-label="LinkedIn"
+                   target="_blank"
+                   rel="noopener">
+
+                    in
+
+                </a>
+
+
+                <!-- YouTube -->
+
+                <a href="#"
+                   aria-label="YouTube"
+                   target="_blank"
+                   rel="noopener">
+
+                    You
+
+                </a>
+
+
+                <!-- X -->
+
+                <a href="#"
+                   aria-label="X"
+                   target="_blank"
+                   rel="noopener">
+
+                    X
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CONTACT AREA -->
+
+        <div class="footer-contact">
+
+
+            <h3>
+                CONTACT
+            </h3>
+
+
+            <!-- ADDRESS -->
+
+            <div class="contact-line">
+
+
+                <span class="contact-icon">
+                    📍
+                </span>
+
+
+                <p>
+
+                    <strong>
+                        New Age Home
+                    </strong>,
+                    Left to Sojatia Jewellers,
+                    Court Choraha,
+                    Madhuban,
+                    Udaipur-313001
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- PHONE -->
+
+            <div class="contact-line">
+
+
+                <span class="contact-icon">
+                    📞
+                </span>
+
+
+                <p>
+
+                    <a href="tel:+919116002240">
+
+                        +91-9116002240
+
+                    </a>
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- EMAIL -->
+
+            <div class="contact-line">
+
+
+                <span class="contact-icon">
+                    ✉
+                </span>
+
+
+                <p>
+
+                    <a href="mailto:info@newagehome.store">
+
+                        Info@newagehome.store
+
+                    </a>
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
+
+
+        <p>
+            © New Age Home
+        </p>
+
+
+        <p>
+            Home Improvement & Interior Solutions
+        </p>
+
+
+        <p>
+
+            <a href="https://www.newagehome.store/">
+
+                Official New Age Home Website
+
+            </a>
+
+        </p>
+
+
+    </div>
+
 
 </footer>
 
